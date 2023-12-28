@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"status\": \"close\",\r\n    \"full_name\":\"harsha vardhan\",\r\n    \"age\":28,\r\n    \"gender\":\"male\"\r\n}",
+							"raw": "{\r\n    \"status\": \"cLose\",\r\n    \"full_name\":\"harsha\",\r\n    \"age\":28,\r\n    \"gender\":\"Male\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -24,16 +24,19 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/tickets/39",
+							"raw": "http://ec2-13-233-110-31.ap-south-1.compute.amazonaws.com/api/tickets/40",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"ec2-13-233-110-31",
+								"ap-south-1",
+								"compute",
+								"amazonaws",
+								"com"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"tickets",
-								"39"
+								"40"
 							]
 						}
 					},
@@ -54,12 +57,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/tickets/41",
+							"raw": "http://ec2-13-233-110-31.ap-south-1.compute.amazonaws.com/api/tickets/41",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"ec2-13-233-110-31",
+								"ap-south-1",
+								"compute",
+								"amazonaws",
+								"com"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"tickets",
@@ -128,7 +134,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://ec2-13-233-110-31.ap-south-1.compute.amazonaws.com/api/ticket-details/40",
+							"raw": "http://ec2-13-233-110-31.ap-south-1.compute.amazonaws.com/api/ticket-details/kjnsd",
 							"protocol": "http",
 							"host": [
 								"ec2-13-233-110-31",
@@ -140,7 +146,7 @@
 							"path": [
 								"api",
 								"ticket-details",
-								"40"
+								"kjnsd"
 							]
 						}
 					},
@@ -169,7 +175,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://ec2-13-233-110-31.ap-south-1.compute.amazonaws.com/api/ticket-details/40",
+							"raw": "http://ec2-13-233-110-31.ap-south-1.compute.amazonaws.com/api/ticket/status/42",
 							"protocol": "http",
 							"host": [
 								"ec2-13-233-110-31",
@@ -180,8 +186,9 @@
 							],
 							"path": [
 								"api",
-								"ticket-details",
-								"40"
+								"ticket",
+								"status",
+								"42"
 							]
 						}
 					},
@@ -205,7 +212,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://ec2-13-233-110-31.ap-south-1.compute.amazonaws.com/api/ticket-details/40",
+							"raw": "http://ec2-13-233-110-31.ap-south-1.compute.amazonaws.com/api/ticket/status/40",
 							"protocol": "http",
 							"host": [
 								"ec2-13-233-110-31",
@@ -216,7 +223,8 @@
 							],
 							"path": [
 								"api",
-								"ticket-details",
+								"ticket",
+								"status",
 								"40"
 							]
 						}
@@ -243,12 +251,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/closed-tickets",
+					"raw": "http://ec2-13-233-110-31.ap-south-1.compute.amazonaws.com/api/closed-tickets",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"ec2-13-233-110-31",
+						"ap-south-1",
+						"compute",
+						"amazonaws",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"api",
 						"closed-tickets"
