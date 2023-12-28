@@ -44,7 +44,7 @@ const TicketController = {
       res.status(200).send({ message: "Ticket updated successfully" });
     } catch (error) {
       console.error(error.message);
-      res.status(500).send({ error: "Internal Server Error" });
+      res.status(500).send({ error: JSON.parse(error?.message) || "Internal Server Error" });
     }
   },
 
@@ -52,14 +52,20 @@ const TicketController = {
   getTickets : async (req, res) => {  
     try {
       const {status} = req.body;
+      const schema = z.object({
+        vstatus: z.number().int(),
+      });
+      const { vstatus} = schema.parse({
+        vstatus: CONSTANTS.status.inputMap[status.toLowerCase()],
+      });
       const closedTickets = await Ticket.findAll({ 
         attributes: getTicketAttributes(),
-        where: { status: CONSTANTS.status.inputMap[status.toLowerCase()] }
+        where: { status: vstatus }
        });
       res.status(200).send({data:closedTickets});
     } catch (error) {
       console.error(error.message);
-      res.status(500).send({ message: 'Internal Server Error' });
+      res.status(500).send({ error: JSON.parse(error?.message) ||'Internal Server Error' });
     }
   },
 
@@ -78,8 +84,14 @@ resetTickets : async (req, res) => {
  getTicketDetails : async (req, res) => {
   try {
     const  seat  = parseInt(req.params.seat);
+    const schema = z.object({
+      vseat:z.number().int().gte(1).lte(40),
+    });
+    const { vseat} = schema.parse({
+      vseat: seat,
+    });
     const attributes = req.body.attributes;
-    const ticket = await Ticket.findOne({ attributes:getTicketAttributes(attributes),where: { seat } });
+    const ticket = await Ticket.findOne({ attributes:getTicketAttributes(attributes),where: { seat:vseat } });
 
     if (!ticket) {
       return res.status(404).send({ error: 'Ticket not found or not closed' });
@@ -88,7 +100,7 @@ resetTickets : async (req, res) => {
     res.status(200).send(ticket);
   } catch (error) {
     console.error(error.message);
-    res.status(500).send({ error: 'Internal Server Error' });
+    res.status(500).send({ error: JSON.parse(error?.message) ||'Internal Server Error' });
   }
 }
 

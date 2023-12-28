@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "8bde01b7-a51b-4334-baa4-4cedaede0a66",
+		"name": "ticketbooking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25405595"
+	},
+	"item": [
+		{
+			"name": "updating ticket",
+			"item": [
+				{
+					"name": "update status + user details",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"close\",\r\n    \"full_name\":\"harsha vardhan\",\r\n    \"age\":28,\r\n    \"gender\":\"male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/tickets/39",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"tickets",
+								"39"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "error response",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"close\",\r\n    \"full_name\":\"harsha vardhan\",\r\n    \"age\":28,\r\n    \"gender\":\"male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/tickets/41",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"tickets",
+								"41"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ticket details",
+			"item": [
+				{
+					"name": "get ticket details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-13-233-110-31.ap-south-1.compute.amazonaws.com/api/ticket-details/40",
+							"protocol": "http",
+							"host": [
+								"ec2-13-233-110-31",
+								"ap-south-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"api",
+								"ticket-details",
+								"40"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "error response",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-13-233-110-31.ap-south-1.compute.amazonaws.com/api/ticket-details/40",
+							"protocol": "http",
+							"host": [
+								"ec2-13-233-110-31",
+								"ap-south-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"api",
+								"ticket-details",
+								"40"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ticket status",
+			"item": [
+				{
+					"name": "error response",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-13-233-110-31.ap-south-1.compute.amazonaws.com/api/ticket-details/40",
+							"protocol": "http",
+							"host": [
+								"ec2-13-233-110-31",
+								"ap-south-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"api",
+								"ticket-details",
+								"40"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ticket status",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-13-233-110-31.ap-south-1.compute.amazonaws.com/api/ticket-details/40",
+							"protocol": "http",
+							"host": [
+								"ec2-13-233-110-31",
+								"ap-south-1",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"api",
+								"ticket-details",
+								"40"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "closed-tickets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/closed-tickets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"closed-tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "open-tickets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-233-110-31.ap-south-1.compute.amazonaws.com/api/open-tickets",
+					"protocol": "http",
+					"host": [
+						"ec2-13-233-110-31",
+						"ap-south-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"open-tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset-tickets",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://ec2-13-233-110-31.ap-south-1.compute.amazonaws.com/api/admin/reset",
+					"protocol": "http",
+					"host": [
+						"ec2-13-233-110-31",
+						"ap-south-1",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"admin",
+						"reset"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

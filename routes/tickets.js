@@ -12,10 +12,10 @@ router.put(
 
 // get the ticket status 
 router.get(
-  '/ticket/staus/:seat',
+  '/ticket/status/:seat',
   async (req,res)=>{
     req.body.attributes = ["status"] 
-    await TicketController.updateTicketStatus(req,res)
+    await TicketController.getTicketDetails(req,res)
   }
   );
 
